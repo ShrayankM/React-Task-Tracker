@@ -38,7 +38,7 @@ function App() {
     setTasks(tasks.filter((task) => task.id !== id));
   }
 
-  //TODO Toggle Remainder on Double Click
+  //TODO Toggle Remainder on Double Click on check
   const toggleRemainder = (id) => {
     setTasks(tasks.map((task) => task.id === id ? {...task, remainder: !task.remainder} : task));
   }
