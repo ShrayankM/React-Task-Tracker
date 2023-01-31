@@ -22,7 +22,7 @@ public class UserProfileController {
         return userProfileService.getUserProfileList();
     }
 
-    @RequestMapping(path = "{userProfileId}/image/upload", method = RequestMethod.POST,
+    @RequestMapping(path = "api/v1/user-profile/{userProfileId}/image/upload", method = RequestMethod.POST,
                     consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public void uploadUserProfileImage(@PathVariable UUID userProfileId, @RequestBody MultipartFile file) {
         userProfileService.uploadUserProfileImage(userProfileId, file);

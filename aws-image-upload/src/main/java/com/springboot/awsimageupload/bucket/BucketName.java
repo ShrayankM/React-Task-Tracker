@@ -1,5 +1,7 @@
 package com.springboot.awsimageupload.bucket;
 
+import org.springframework.context.annotation.Bean;
+
 public enum BucketName {
 
     PROFILE_IMAGE("aws-image-upload-app");
@@ -10,7 +12,7 @@ public enum BucketName {
         this.bucketName = bucketName;
     }
 
-    String getBucketName() {
+    public String getBucketName() {
         return this.bucketName;
     }
 }
